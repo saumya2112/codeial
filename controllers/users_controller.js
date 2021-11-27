@@ -89,7 +89,6 @@ module.exports.createSession = function(req , res){
     });    
 }
 module.exports.deleteSession = function(req , res){
-    User.findByIdAndDelete(req.cookies.user_id , function(err , user){
-        
-    });    
+    res.cookie('user_id' , '');
+    return res.redirect('/users/sign-in'); 
 }
