@@ -1,3 +1,8 @@
 <link rel="stylesheet" href="/css/users_profile.css">
 <h1>This is users / profile</h1>
-    
+<p>Name : <%= user.name %> </p>
+<p>Email : <%= user.email %> </p>
+
+<form action="/users/delete-session" method="POST">
+    <input type="submit" name="Sign Out">
+</form>
